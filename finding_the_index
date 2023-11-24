@@ -1,0 +1,20 @@
+#Finding the index of a number using the entered number
+
+from random import randint
+
+list_of_number = [randint(1, 100) for _ in range(15)]
+print(list_of_number)
+
+user_data = int(input('Type number for find: '))
+found_indices = []
+
+if user_data in list_of_number:
+    for index in range(len(list_of_number)):
+        if list_of_number[index] == user_data:
+            found_indices.append(index)
+
+
+if found_indices:
+    print(f'The index of the number is: {found_indices}')
+else:
+    print('index not found')
