@@ -1,0 +1,15 @@
+user_data_1 = int(input("Type first number: "))
+user_data_2 = int(input("Type second number: "))
+
+if user_data_1 > user_data_2:
+    a = user_data_1
+    b = user_data_2
+else:
+    a = user_data_2
+    b = user_data_1
+
+while b != 0:
+    a, b = b, a % b
+
+gcd = a
+print(f"The greatest common divisor (GCD) of {user_data_1} and {user_data_2} is: {gcd}")
