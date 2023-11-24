@@ -1,0 +1,16 @@
+from random import randint
+
+max_1 = 0
+max_2 = 0
+list_of_number = [randint(1, 100) for _ in range(10)]
+print(list_of_number)
+
+for i in list_of_number:
+    if max_1 < i:
+        max_2 = max_1
+        max_1 = i
+    elif i > max_2 and i != max_1:
+        max_2 = i
+print(f"First max: {max_1}")
+print(f"Second max: {max_2}")
+
