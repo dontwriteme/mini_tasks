@@ -1,0 +1,24 @@
+user_data = input("Enter the numbers separated by a space: ")
+list_number = [int(num) for num in user_data.split()]
+
+print(list_number)
+
+user_choice = input("Type asc/desc: ")
+
+is_sorted = False
+while not is_sorted:
+    is_sorted = True
+    if user_choice == 'asc':
+        for number in range(len(list_number) - 1):
+            if list_number[number] > list_number[number + 1]:
+                list_number[number], list_number[number + 1] = list_number[number + 1], list_number[number]
+                is_sorted = False
+    elif user_choice == 'desc':
+        for number in range(len(list_number) - 1):
+            if list_number[number] < list_number[number + 1]:
+                list_number[number], list_number[number + 1] = list_number[number + 1], list_number[number]
+                is_sorted = False
+    else:
+        print("Invalid choice. Please type 'asc' or 'desc")
+
+print(list_number)
