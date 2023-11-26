@@ -1,0 +1,18 @@
+from random import randint
+
+list_of_number = [randint(1, 100) for _ in range(10)]
+
+print(list_of_number)
+
+min_1 = list_of_number[0]
+min_2 = list_of_number[1]
+
+for number in list_of_number:
+    if number < min_1:
+        min_1 = number
+    elif number < min_2 and number != min_1:
+        min_2 = number
+
+print(f"First minimum: {min_1}")
+print(f"Second minimum: {min_2}")
+
